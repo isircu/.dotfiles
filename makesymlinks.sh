@@ -16,18 +16,18 @@ files="bashrc zshrc Xdefaults vim vimrc config tmux.conf"    # list of files/fol
 
 echo -n "Installing required packages ..."
 sudo apt-get -y install curl zsh vim git i3 feh tmux rxvt-unicode-256color compton preload
-sudo apt-get install redshift-gtk xbacklight volumeicon-alsa
+#sudo apt-get install redshift-gtk xbacklight volumeicon-alsa
 #echo -n "Installing oh-my-zsh"
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # clone
-git clone https://github.com/powerline/fonts.git --depth=1
+#git clone https://github.com/powerline/fonts.git --depth=1
 # install
-cd fonts
-./install.sh
+#cd fonts
+#./install.sh
 # clean-up a bit
-cd ..
-rm -rf fonts
+#cd ..
+#rm -rf fonts
 
 ## Install VS Code
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
