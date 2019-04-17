@@ -1,0 +1,23 @@
+# Git aliases
+alias gs='git status'
+alias gl='git log'
+alias glp='git log --pretty=oneline'
+alias glf="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+#alias reload="source ~/.bash_profile"
+alias reload='source ~/.zshrc'
+alias pls="sudo"
+alias rr="rm -rf"
+
+alias week="date +%V"
+alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
+
+alias do_update='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get clean && sudo apt-get -y autoclean && sudo apt-get -y autoremove'
+alias tarxz='tar c . | xz > archive.tar.xz'
