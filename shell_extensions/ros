@@ -1,4 +1,5 @@
-#source /opt/ros/melodic/setup.zsh
+source /opt/ros/melodic/setup.zsh
 #source ~/crazyflie_ws/devel/setup.zsh
+source ~/catkin_ws/devel/setup.zsh
 #source ~/teleop/devel/setup.zsh
 #source ~/sandbox_ws/devel/setup.zsh

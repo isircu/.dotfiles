@@ -62,7 +62,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     #git-aware-promt
-    PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "    
+    PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
     #Old
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
@@ -131,19 +131,3 @@ fi
 source ~/dotfiles/zsh/alias
 source ~/dotfiles/zsh/function
 source ~/dotfiles/zsh/path
-# added by Anaconda3 5.3.0 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/isircu/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/home/isircu/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/isircu/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/home/isircu/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<

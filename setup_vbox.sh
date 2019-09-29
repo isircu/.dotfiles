@@ -1,3 +1,4 @@
-sudo apt-get install build-essential dkms linux-image-generic linux-image-$(uname -r)
+#!/bin/bash
 
+# Enable shared folders
 sudo usermod -aG vboxsf $(whoami)
