@@ -100,7 +100,7 @@ fi
 
 install_arduino() {
 # Test to see if zshell is installed.  If it is:
-if [ ! -f /usr/local/bin/arduino ]; then
+if [ -f /usr/local/bin/arduino ]; then
     echo "Arduino installed" >> $_logfile
 else
 
@@ -167,11 +167,11 @@ echo -n "Installing required packages ..." >> $_logfile
 sudo apt-get -y install curl vim git i3 feh tmux rxvt-unicode-256color preload
 
 
-#install_vscode
-#install_fonts
-#install_ros
-#install_zsh
-#install_arduino
+install_vscode
+install_fonts
+install_ros
+install_zsh
+install_arduino
 
 
 # create dotfiles_old in homedir
@@ -192,12 +192,11 @@ for file in $files; do
     ln -s -n $dir/$file ~/.$file
 done
 
-#sudo apt-get -y upgrade
-#sudo apt-get -y dist-upgrade
-#sudo apt-get -y clean
-#sudo apt-get -y autoclean
-#sudo apt-get -y autoremove
-install_zsh
+sudo apt-get -y upgrade
+sudo apt-get -y dist-upgrade
+sudo apt-get -y clean
+sudo apt-get -y autoclean
+sudo apt-get -y autoremove
 
 echo "Setup finished..."
 #cat $_logfile
