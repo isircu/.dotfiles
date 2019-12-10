@@ -1,0 +1,2 @@
+// Batch rename using sh
+for i in ./* ; do mv -v "$i" "$i.jpg" ; done
