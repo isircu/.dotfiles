@@ -20,4 +20,9 @@ alias week="date +%V"
 alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
 
 alias do_update='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get clean && sudo apt-get -y autoclean && sudo apt-get -y autoremove'
+
 alias tarxz='tar c . | xz > archive.tar.xz'
+alias echoip="ip -4 addr show wlp2s0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
+
+alias cdsh='cd ~/.dotfiles/shell_extensions/'
+alias cdgit='cd ~/git/'

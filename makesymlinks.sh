@@ -123,7 +123,7 @@ else
         wget https://www.pjrc.com/teensy/49-teensy.rules
         sudo mv 49-teensy.rules /etc/udev/rules.d/
 
-        wget https://www.pjrc.com/teensy/td_147/TeensyduinoInstall.linux64
+        wget https://www.pjrc.com/teensy/td_150/TeensyduinoInstall.linux64
         chmod +x TeensyduinoInstall.linux64
         sudo ./TeensyduinoInstall.linux64
 
@@ -167,9 +167,9 @@ echo -n "Installing required packages ..." >> $_logfile
 sudo apt-get -y install curl vim git i3 feh tmux rxvt-unicode-256color preload
 
 
-install_vscode
+#install_vscode
 install_fonts
-install_ros
+#install_ros
 install_zsh
 install_arduino
 

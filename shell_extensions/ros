@@ -1,6 +1,23 @@
-source /opt/ros/melodic/setup.zsh
-source ~/catkin_ws/devel/setup.zsh
+#source /opt/ros/melodic/setup.zsh
+source /opt/ros/kinetic/setup.zsh
+#source ~/catkin_ws/devel/setup.zsh
+source ~/catkin_tutorial/devel/setup.zsh
 
-#source ~/crazyflie_ws/devel/setup.zsh
-#source ~/teleop/devel/setup.zsh
-#source ~/sandbox_ws/devel/setup.zsh
+#export ROS_MASTER_URI=http://192.168.137.40:11311
+#export ROS_HOSTNAME=192.168.137.40
+#export ROS_MASTER_URI=http://192.168.0.228:11311
+#export ROS_HOSTNAME=192.168.0.228
+#export ROS_MASTER_URI=http://172.26.146.241:11311
+#export ROS_HOSTNAME=172.26.146.241
+
+## HOST as MASTER
+#export ROS_HOSTNAME=$(echoip)
+#export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
+
+## Pi as MASTER
+export ROS_HOSTNAME=$(hostname).local
+#export ROS_MASTER_URI=http://pi3home.local:11311
+export ROS_MASTER_URI=http://$(hostname).local:11311
+
+## Turtlebot3 simulation specific
+export TURTLEBOT3_MODEL=burger
