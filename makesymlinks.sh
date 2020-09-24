@@ -123,13 +123,15 @@ else
         wget https://www.pjrc.com/teensy/49-teensy.rules
         sudo mv 49-teensy.rules /etc/udev/rules.d/
 
-        wget https://www.pjrc.com/teensy/td_150/TeensyduinoInstall.linux64
+        # wget https://www.pjrc.com/teensy/td_150/TeensyduinoInstall.linux64
+     	wget https://www.pjrc.com/teensy/td_153/TeensyduinoInstall.linux64
         chmod +x TeensyduinoInstall.linux64
         sudo ./TeensyduinoInstall.linux64
 
 
         echo "Cleaning up Arduino install" >> $_logfile
-        #rm -rf TeensyduinoInstall.linux64
+        rm -rf arduino-*linux64.tar.xz         
+        rm -rf TeensyduinoInstall.linux64
 
     else
         echo "E: Download Arcuino IDE and re-run this script!" >> $_logfile
@@ -147,12 +149,14 @@ else
     curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
 
     sudo apt update
-    sudo apt -y install ros-melodic-desktop-full
+    sudo apt -y install ros-noetic-desktop-full ros-noetic-plotjuggler
 
-    sudo rosdep init
-    rosdep update
+    #sudo rosdep init
+    #rosdep update
 
-    sudo apt -y install python-rosinstall python-rosinstall-generator python-wstool build-essential
+    #sudo apt -y install python-rosinstall python-rosinstall-generator python-wstool build-essential
+
+    source /opt/ros/noetic/setup.sh
 
     mkdir -p ~/catkin_ws/src
     pushd ~/catkin_ws/
@@ -164,12 +168,13 @@ fi
 
 
 echo -n "Installing required packages ..." >> $_logfile
-sudo apt-get -y install curl vim git i3 feh tmux rxvt-unicode-256color preload
+#sudo apt-get -y install i3 feh
+sudo apt-get -y install curl vim git tmux rxvt-unicode-256color preload
 
 
-#install_vscode
+install_vscode
 install_fonts
-#install_ros
+install_ros
 install_zsh
 install_arduino
 
@@ -200,3 +205,4 @@ sudo apt-get -y autoremove
 
 echo "Setup finished..."
 #cat $_logfile
+sudo reboot
